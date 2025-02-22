@@ -32,12 +32,12 @@ describe('Gerenciamento de produtos no carrinho', () => {
     it('Deve remover um produto do inventário', () => {
         cy.adicionarProduto('Sauce Labs Backpack');
         cy.removerProdutoInventario('Sauce Labs Backpack');
-        cy.get('.shopping_cart_badge').should('not.exist'); // Verifica que o carrinho não tem itens
+        cy.get('.shopping_cart_badge').should('not.exist');
     });
 
     it('Deve remover um produto do carrinho', () => {
         cy.adicionarProduto('Sauce Labs Backpack');
         cy.removerProdutoCarrinho('Sauce Labs Backpack');
-        cy.get('.cart_item').should('not.exist'); // Confirma que o carrinho está vazio
+        cy.get('.cart_item').should('not.exist');
     });
 });

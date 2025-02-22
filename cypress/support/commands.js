@@ -11,7 +11,7 @@ Cypress.Commands.add('adicionarProduto', (product) => {
       .contains("Add to cart")
       .click();
     
-    cy.get('.shopping_cart_badge').should('be.visible'); // Confirma que o carrinho tem pelo menos 1 item
+    cy.get('.shopping_cart_badge').should('be.visible');
 });
 
 Cypress.Commands.add('verificarProduto', (product) => { 
